@@ -22,7 +22,7 @@ func main() {
 		logrus.Fatal(err)
 	}
 
-	serveUsingRegular(s.Router)
+	serveUsingLambda(s.Router)
 }
 
 func serveUsingRegular(r *mux.Router) {
