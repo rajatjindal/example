@@ -29,7 +29,7 @@ func (s *Server) addRoutes() {
 	})
 
 	//endpoints
-	s.Router.Methods(http.MethodGet).Path("/endpoints").HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+	s.Router.Methods(http.MethodGet).Path("/api/endpoints").HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		w.WriteHeader(http.StatusOK)
 		w.Write([]byte("hello from /endpoints"))
 	})
