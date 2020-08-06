@@ -1,0 +1,12 @@
+[build]
+  command = "mkdir -p functions && go build -o functions/api main.go"
+  functions = "functions"
+  publish = "dist"
+
+[build.environment]
+  GO_IMPORT_PATH = "github.com/rajatjindal/example"
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/api/:splat"
+  status = 200
